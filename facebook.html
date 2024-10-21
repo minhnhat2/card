@@ -1,31 +1,27 @@
-<html>
-    <head>
-        <title>Facebook login page</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="container">
-            <div class="leftpart">
-                <h1>facebook</h1>
-                <h3>Facebook helps you connect and share with the
-                    people in your life
-                </h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login to Facebook</h2>
+        <form id="loginForm" onsubmit="return loginUser()">
+            <div class="input-group">
+                <label for="username">Email or Phone</label>
+                <input type="text" id="username" required>
             </div>
-            <div class="Rightpart">
-                <div class="loginpage">
-                    <form>
-                        <input type="text" placeholder="Email or Phone number">
-                        <input type="password" placeholder="Password">
-                        <input type="submit">
-                    </form>
-                    <p>Forgot Password ?</p>
-                    <hr>
-                    <div class="createaccount">
-                        Create a new account
-                    </div>
-                </div>
-                <span>Create a page for a well-know person, Orchestra or business</span>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
             </div>
-        </div>
-    </body>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
